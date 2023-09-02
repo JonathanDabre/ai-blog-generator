@@ -15,7 +15,7 @@ def index():
 @app.route('/generate', methods=['GET', 'POST'])
 def generate():
       if request.method == 'POST':
-        llm = OpenAI(openai_api_key="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", temperature=0.3)
+        llm = OpenAI(openai_api_key="api-key", temperature=0.3)
         prompt = request.json.get('prompt')
         
         prompt1 = PromptTemplate.from_template("Generate a blog on title {title}?")
